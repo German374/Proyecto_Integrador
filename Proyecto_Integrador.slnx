@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="BusinessLogic/BusinessLogic.csproj" />
+  <Project Path="DataAcces/DataAcces.csproj" />
+  <Project Path="Proyecto_Integrador/Proyecto_Integrador.csproj" />
+</Solution>
