@@ -12,7 +12,7 @@ namespace DataAcces
             return new SqlConnection(cadena);
         }
 
-        // ================= AULA =================
+        // AULA 
 
         public DataTable MostrarAula()
         {
@@ -74,7 +74,7 @@ namespace DataAcces
 
             cn.Close();
         }
-        // ================= TIPO_SENSOR =================
+        // TIPO_SENSOR 
 
         public DataTable MostrarTipoSensor()
         {
@@ -150,7 +150,7 @@ namespace DataAcces
 
             cn.Close();
         }
-        // ================= SENSOR =================
+        // ----SENSOR--
 
         public DataTable MostrarSensor()
         {

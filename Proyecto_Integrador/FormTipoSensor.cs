@@ -94,7 +94,7 @@ namespace Proyecto_Integrador
             Limpiar();
         }
 
-        // 🔥 CORREGIDO AQUÍ (YA NO USA nombre/variable/unidad)
+        
         private void dgvTipoSensor_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -144,7 +144,7 @@ namespace Proyecto_Integrador
             form.Show();
         }
 
-        // ================= PLACEHOLDERS =================
+        // PLACEHOLDERS 
 
         private void txtNombreTipo_Enter(object sender, EventArgs e)
         {

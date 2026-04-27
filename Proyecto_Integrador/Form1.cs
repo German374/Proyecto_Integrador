@@ -121,7 +121,7 @@ namespace Proyecto_Integrador
             idAula = 0;
         }
 
-        // ================= PLACEHOLDER NOMBRE =================
+        // PLACEHOLDER NOMBRE
         private void txtNombre_Enter(object sender, EventArgs e)
         {
             if (txtNombre.ForeColor == Color.Gray)
@@ -140,7 +140,7 @@ namespace Proyecto_Integrador
             }
         }
 
-        // ================= PLACEHOLDER UBICACION =================
+        // PLACEHOLDER UBICACION
         private void txtUbicacion_Enter(object sender, EventArgs e)
         {
             if (txtUbicacion.ForeColor == Color.Gray)

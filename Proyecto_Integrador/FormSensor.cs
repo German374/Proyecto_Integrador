@@ -24,7 +24,7 @@ namespace Proyecto_Integrador
 
         private void CargarCombos()
         {
-            // ===== COMBO AULA =====
+            // COMBO AULA 
             DataTable dtAula = logicaAula.MostrarAula();
 
             DataRow filaAula = dtAula.NewRow();
@@ -37,7 +37,7 @@ namespace Proyecto_Integrador
             cmbAula.ValueMember = "idAula";
             cmbAula.SelectedIndex = 0;
 
-            // ===== COMBO TIPO SENSOR =====
+            // COMBO TIPO SENSOR
             DataTable dtTipo = logicaTipo.MostrarTipoSensor();
 
             DataRow filaTipo = dtTipo.NewRow();
