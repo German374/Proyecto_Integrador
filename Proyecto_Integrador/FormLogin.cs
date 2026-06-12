@@ -16,12 +16,33 @@ namespace Proyecto_Integrador
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
+            
+            this.BackColor = Color.FromArgb(230, 240, 245);
+
             txtUsuario.Text = "Ingrese usuario";
             txtUsuario.ForeColor = Color.Gray;
+            txtUsuario.BorderStyle = BorderStyle.FixedSingle;
+            txtUsuario.Font = new Font("Segoe UI", 10);
 
+      
             txtContrasena.Text = "Ingrese contraseña";
             txtContrasena.ForeColor = Color.Gray;
             txtContrasena.UseSystemPasswordChar = false;
+            txtContrasena.BorderStyle = BorderStyle.FixedSingle;
+            txtContrasena.Font = new Font("Segoe UI", 10);
+
+            
+            btnLogin.BackColor = Color.FromArgb(41, 128, 185);
+            btnLogin.ForeColor = Color.White;
+
+            btnLogin.FlatStyle = FlatStyle.Flat;
+            btnLogin.FlatAppearance.BorderSize = 0;
+
+            btnLogin.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+
+           
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

@@ -24,24 +24,29 @@
             btnTipoSensor = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvAula).BeginInit();
             SuspendLayout();
-
+            // 
             // txtNombre
-            txtNombre.Location = new Point(77, 38);
+            // 
+            txtNombre.Location = new Point(77, 72);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(160, 23);
             txtNombre.TabIndex = 0;
             txtNombre.Enter += txtNombre_Enter;
+            txtNombre.KeyPress += txtNombre_KeyPress;
             txtNombre.Leave += txtNombre_Leave;
-
+            // 
             // txtUbicacion
-            txtUbicacion.Location = new Point(77, 109);
+            // 
+            txtUbicacion.Location = new Point(77, 133);
             txtUbicacion.Name = "txtUbicacion";
             txtUbicacion.Size = new Size(160, 23);
             txtUbicacion.TabIndex = 1;
             txtUbicacion.Enter += txtUbicacion_Enter;
+            txtUbicacion.KeyPress += txtUbicacion_KeyPress;
             txtUbicacion.Leave += txtUbicacion_Leave;
-
+            // 
             // btnGuardar
+            // 
             btnGuardar.Location = new Point(92, 182);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(75, 23);
@@ -49,34 +54,38 @@
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
             btnGuardar.Click += btnGuardar_Click;
-
+            // 
             // dgvAula
+            // 
             dgvAula.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvAula.Location = new Point(258, 149);
+            dgvAula.Location = new Point(261, 182);
             dgvAula.Name = "dgvAula";
             dgvAula.Size = new Size(240, 150);
             dgvAula.TabIndex = 3;
             dgvAula.CellClick += dgvAula_CellClick;
-
+            // 
             // btnEditar
-            btnEditar.Location = new Point(248, 38);
+            // 
+            btnEditar.Location = new Point(248, 72);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(75, 23);
             btnEditar.TabIndex = 4;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
             btnEditar.Click += btnEditar_Click;
-
+            // 
             // btnEliminar
-            btnEliminar.Location = new Point(248, 108);
+            // 
+            btnEliminar.Location = new Point(248, 133);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(75, 23);
             btnEliminar.TabIndex = 5;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
             btnEliminar.Click += btnEliminar_Click;
-
+            // 
             // btnTipoSensor
+            // 
             btnTipoSensor.Location = new Point(144, 368);
             btnTipoSensor.Name = "btnTipoSensor";
             btnTipoSensor.Size = new Size(113, 23);
@@ -84,8 +93,9 @@
             btnTipoSensor.Text = "Tipo Sensor";
             btnTipoSensor.UseVisualStyleBackColor = true;
             btnTipoSensor.Click += btnTipoSensor_Click;
-
+            // 
             // Form1
+            // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);

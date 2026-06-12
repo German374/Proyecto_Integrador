@@ -17,7 +17,46 @@ namespace Proyecto_Integrador
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Placeholder inicial
+            // COLOR DEL FORM
+            this.BackColor = Color.FromArgb(230, 240, 245);
+
+            // BOTONES
+            btnGuardar.BackColor = Color.FromArgb(46, 134, 193);
+            btnGuardar.ForeColor = Color.White;
+            btnGuardar.FlatStyle = FlatStyle.Flat;
+
+            btnEditar.BackColor = Color.FromArgb(52, 152, 219);
+            btnEditar.ForeColor = Color.White;
+            btnEditar.FlatStyle = FlatStyle.Flat;
+
+            btnEliminar.BackColor = Color.FromArgb(231, 76, 60);
+            btnEliminar.ForeColor = Color.White;
+            btnEliminar.FlatStyle = FlatStyle.Flat;
+
+            btnTipoSensor.BackColor = Color.FromArgb(39, 174, 96);
+            btnTipoSensor.ForeColor = Color.White;
+            btnTipoSensor.FlatStyle = FlatStyle.Flat;
+
+            // TEXTBOX
+            txtNombre.BorderStyle = BorderStyle.FixedSingle;
+            txtUbicacion.BorderStyle = BorderStyle.FixedSingle;
+
+            // DATAGRIDVIEW
+            dgvAula.BackgroundColor = Color.White;
+            dgvAula.BorderStyle = BorderStyle.FixedSingle;
+            dgvAula.EnableHeadersVisualStyles = false;
+
+            dgvAula.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(41, 128, 185);
+            dgvAula.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvAula.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+
+            dgvAula.DefaultCellStyle.SelectionBackColor = Color.FromArgb(52, 152, 219);
+            dgvAula.DefaultCellStyle.SelectionForeColor = Color.White;
+            dgvAula.DefaultCellStyle.Font = new Font("Segoe UI", 9);
+
+            dgvAula.GridColor = Color.LightGray;
+
+            // TU CÓDIGO
             txtNombre.Text = "Ingrese nombre del aula";
             txtNombre.ForeColor = Color.Gray;
 
@@ -34,7 +73,8 @@ namespace Proyecto_Integrador
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtNombre.ForeColor == Color.Gray || txtUbicacion.ForeColor == Color.Gray)
+            if (txtNombre.ForeColor == Color.Gray || txtUbicacion.ForeColor == Color.Gray ||
+                string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtUbicacion.Text))
             {
                 MessageBox.Show("Complete todos los campos");
                 return;
@@ -56,7 +96,8 @@ namespace Proyecto_Integrador
                 return;
             }
 
-            if (txtNombre.ForeColor == Color.Gray || txtUbicacion.ForeColor == Color.Gray)
+            if (txtNombre.ForeColor == Color.Gray || txtUbicacion.ForeColor == Color.Gray ||
+                string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtUbicacion.Text))
             {
                 MessageBox.Show("Complete todos los campos");
                 return;
@@ -156,6 +197,28 @@ namespace Proyecto_Integrador
             {
                 txtUbicacion.Text = "Ingrese ubicación";
                 txtUbicacion.ForeColor = Color.Gray;
+            }
+        }
+
+        // VALIDACIÓN: nombre del aula permite letras, números y espacios
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetterOrDigit(e.KeyChar) &&
+                !char.IsWhiteSpace(e.KeyChar) &&
+                e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        // VALIDACIÓN: ubicación solo permite letras y espacios
+        private void txtUbicacion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) &&
+                !char.IsWhiteSpace(e.KeyChar) &&
+                e.KeyChar != (char)8)
+            {
+                e.Handled = true;
             }
         }
 

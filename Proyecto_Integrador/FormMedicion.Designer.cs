@@ -22,52 +22,49 @@
             dgvMediciones = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dgvMediciones).BeginInit();
             SuspendLayout();
-            // 
+
             // label1
-            // 
             label1.AutoSize = true;
             label1.Location = new Point(94, 84);
             label1.Name = "label1";
             label1.Size = new Size(100, 15);
             label1.TabIndex = 4;
             label1.Text = "Seleccione sensor";
-            // 
+
             // cmbSensor
-            // 
             cmbSensor.FormattingEnabled = true;
             cmbSensor.Location = new Point(84, 124);
             cmbSensor.Name = "cmbSensor";
-            cmbSensor.Size = new Size(121, 23);
+            cmbSensor.Size = new Size(170, 23);
             cmbSensor.TabIndex = 3;
-            // 
+
             // btnMedir
-            // 
             btnMedir.Location = new Point(107, 239);
             btnMedir.Name = "btnMedir";
-            btnMedir.Size = new Size(75, 23);
+            btnMedir.Size = new Size(90, 28);
             btnMedir.TabIndex = 2;
             btnMedir.Text = "Medir";
             btnMedir.UseVisualStyleBackColor = true;
             btnMedir.Click += btnMedir_Click;
-            // 
+
             // txtResultado
-            // 
             txtResultado.Location = new Point(466, 105);
             txtResultado.Name = "txtResultado";
-            txtResultado.Size = new Size(100, 23);
+            txtResultado.Size = new Size(140, 23);
             txtResultado.TabIndex = 1;
             txtResultado.TextChanged += txtResultado_TextChanged;
-            // 
+            txtResultado.Enter += txtResultado_Enter;
+            txtResultado.Leave += txtResultado_Leave;
+            txtResultado.KeyPress += txtResultado_KeyPress;
+
             // dgvMediciones
-            // 
             dgvMediciones.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvMediciones.Location = new Point(220, 155);
             dgvMediciones.Name = "dgvMediciones";
             dgvMediciones.Size = new Size(553, 215);
             dgvMediciones.TabIndex = 0;
-            // 
+
             // FormMedicion
-            // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);

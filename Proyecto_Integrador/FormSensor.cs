@@ -18,6 +18,55 @@ namespace Proyecto_Integrador
 
         private void FormSensor_Load(object sender, EventArgs e)
         {
+            // ===== COLOR DEL FORM =====
+            this.BackColor = Color.FromArgb(230, 240, 245);
+
+            // ===== BOTONES =====
+            btnGuardarSensor.BackColor = Color.FromArgb(46, 134, 193);
+            btnGuardarSensor.ForeColor = Color.White;
+            btnGuardarSensor.FlatStyle = FlatStyle.Flat;
+            btnGuardarSensor.FlatAppearance.BorderSize = 0;
+
+            btnEliminarSensor.BackColor = Color.FromArgb(231, 76, 60);
+            btnEliminarSensor.ForeColor = Color.White;
+            btnEliminarSensor.FlatStyle = FlatStyle.Flat;
+            btnEliminarSensor.FlatAppearance.BorderSize = 0;
+
+            btnIrMedicion.BackColor = Color.FromArgb(39, 174, 96);
+            btnIrMedicion.ForeColor = Color.White;
+            btnIrMedicion.FlatStyle = FlatStyle.Flat;
+            btnIrMedicion.FlatAppearance.BorderSize = 0;
+
+            // ===== COMBOBOX =====
+            cmbAula.FlatStyle = FlatStyle.Flat;
+            cmbTipoSensor.FlatStyle = FlatStyle.Flat;
+
+            cmbAula.Font = new Font("Segoe UI", 9);
+            cmbTipoSensor.Font = new Font("Segoe UI", 9);
+
+            // ===== DATAGRIDVIEW =====
+            dgvSensor.BackgroundColor = Color.White;
+            dgvSensor.BorderStyle = BorderStyle.FixedSingle;
+
+            dgvSensor.EnableHeadersVisualStyles = false;
+
+            dgvSensor.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(41, 128, 185);
+            dgvSensor.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            dgvSensor.ColumnHeadersDefaultCellStyle.Font =
+                new Font("Segoe UI", 9, FontStyle.Bold);
+
+            dgvSensor.DefaultCellStyle.SelectionBackColor =
+                Color.FromArgb(52, 152, 219);
+
+            dgvSensor.DefaultCellStyle.SelectionForeColor = Color.White;
+
+            dgvSensor.DefaultCellStyle.Font =
+                new Font("Segoe UI", 9);
+
+            dgvSensor.GridColor = Color.LightGray;
+
+            // ===== CARGAR DATOS =====
             CargarCombos();
             CargarDatos();
         }

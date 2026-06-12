@@ -17,8 +17,48 @@ namespace Proyecto_Integrador
 
         private void FormTipoSensor_Load(object sender, EventArgs e)
         {
+            AplicarEstilos();
             PonerPlaceholder();
             CargarDatos();
+        }
+
+        private void AplicarEstilos()
+        {
+            this.BackColor = Color.FromArgb(230, 240, 245);
+
+            btnGuardarTipo.BackColor = Color.FromArgb(46, 134, 193);
+            btnGuardarTipo.ForeColor = Color.White;
+            btnGuardarTipo.FlatStyle = FlatStyle.Flat;
+
+            btnEditarTipo.BackColor = Color.FromArgb(52, 152, 219);
+            btnEditarTipo.ForeColor = Color.White;
+            btnEditarTipo.FlatStyle = FlatStyle.Flat;
+
+            btnEliminarTS.BackColor = Color.FromArgb(231, 76, 60);
+            btnEliminarTS.ForeColor = Color.White;
+            btnEliminarTS.FlatStyle = FlatStyle.Flat;
+
+            btnSensor.BackColor = Color.FromArgb(39, 174, 96);
+            btnSensor.ForeColor = Color.White;
+            btnSensor.FlatStyle = FlatStyle.Flat;
+
+            txtNombreTipo.BorderStyle = BorderStyle.FixedSingle;
+            txtVariable.BorderStyle = BorderStyle.FixedSingle;
+            txtUnidad.BorderStyle = BorderStyle.FixedSingle;
+
+            dgvTipoSensor.BackgroundColor = Color.White;
+            dgvTipoSensor.BorderStyle = BorderStyle.FixedSingle;
+            dgvTipoSensor.EnableHeadersVisualStyles = false;
+
+            dgvTipoSensor.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(41, 128, 185);
+            dgvTipoSensor.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvTipoSensor.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+
+            dgvTipoSensor.DefaultCellStyle.SelectionBackColor = Color.FromArgb(52, 152, 219);
+            dgvTipoSensor.DefaultCellStyle.SelectionForeColor = Color.White;
+            dgvTipoSensor.DefaultCellStyle.Font = new Font("Segoe UI", 9);
+
+            dgvTipoSensor.GridColor = Color.LightGray;
         }
 
         private void CargarDatos()
@@ -62,12 +102,6 @@ namespace Proyecto_Integrador
                 return;
             }
 
-            if (txtNombreTipo.ForeColor == Color.Gray || txtVariable.ForeColor == Color.Gray || txtUnidad.ForeColor == Color.Gray)
-            {
-                MessageBox.Show("Complete todos los campos");
-                return;
-            }
-
             logica.EditarTipoSensor(idTipo, txtNombreTipo.Text, txtVariable.Text, txtUnidad.Text);
 
             MessageBox.Show("Datos actualizados correctamente");
@@ -94,7 +128,6 @@ namespace Proyecto_Integrador
             Limpiar();
         }
 
-        
         private void dgvTipoSensor_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -102,7 +135,6 @@ namespace Proyecto_Integrador
                 idTipo = Convert.ToInt32(dgvTipoSensor.Rows[e.RowIndex].Cells["idTipo"].Value);
 
                 string descripcion = dgvTipoSensor.Rows[e.RowIndex].Cells["descripcion"].Value.ToString();
-
                 string[] partes = descripcion.Split('-');
 
                 if (partes.Length >= 2)
@@ -143,8 +175,6 @@ namespace Proyecto_Integrador
             FormSensor form = new FormSensor();
             form.Show();
         }
-
-        // PLACEHOLDERS 
 
         private void txtNombreTipo_Enter(object sender, EventArgs e)
         {
